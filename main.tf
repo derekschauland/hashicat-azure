@@ -113,6 +113,10 @@ resource "azurerm_virtual_machine" "catapp" {
     admin_username = var.admin_username
     admin_password = var.admin_password
   }
+  tags {
+    Billable = true
+    Department = "devops"
+  }
 
   os_profile_linux_config {
     disable_password_authentication = false
