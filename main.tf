@@ -64,7 +64,7 @@ resource "azurerm_network_security_group" "catapp-sg" {
 }
 
 resource "azurerm_network_interface" "catapp-nic" {
-  name                      = "${var.prefix}-catapp-nic"
+  name                      = "${var.prefix}catapp-nic"
   location                  = var.location
   resource_group_name       = azurerm_resource_group.myresourcegroup.name
   network_security_group_id = azurerm_network_security_group.catapp-sg.id
